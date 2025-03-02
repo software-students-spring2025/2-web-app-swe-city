@@ -32,7 +32,7 @@
 }
 
 
-#loginScreen, #registerScreen, #homeScreen, #friendsScreen, #shuffleScreen{
+#loginScreen, #registerScreen, #homeScreen, #friendsScreen, #shuffleScreen, #profileScreen, #addScreen, #editScreen{
     background-color: var(--background-color);
     display: flex;
     align-items: center;
@@ -184,6 +184,7 @@ header{
 
 #addRestaurant{
     margin-top: 20px;
+    margin-bottom: 50px;
     font-size: 16pt;
     padding: 10px;
     background-color: var(--button-color);
@@ -236,12 +237,13 @@ header{
 
 .restName{
     color: var(--text-color2);
-    font-size: 24px;
+    font-size: 100%;
     font-weight: 700;
 
 }
 
 .restLoc{
+    font-size: 75%;
     margin-top: 10px;
     color: var(--secondary-color);
 
@@ -250,9 +252,10 @@ header{
 .bottomLeft, .bottomRight{
     width: 50%;
     display: flex;
+    line-height: 25px;
     flex-direction: column;
     color: var(--text-color1);
-    font-size: 14pt;
+    font-size: 70%;
     align-items: center;
     justify-content:space-around;
 }
@@ -414,11 +417,10 @@ header{
     flex-direction: column;
 }
 .topHalf{
-    display: flex;
+
     flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
+
 }
 
  #restaurantLink{
@@ -428,7 +430,7 @@ header{
 
 .topLeft{
     width: 100%;
-    text-align: left;
+
 }
 
 header{
@@ -468,7 +470,6 @@ a:hover, a:active{
 
 .restName, .restLoc{
     position: relative;
-    left: -45%;
 }
 
 #tryAgain{
@@ -542,4 +543,76 @@ a:hover, a:active{
     height: 100%;
     border-radius: 5px;
     font-weight: 700;
+}
+
+#profileScreen{
+    display: block;
+    padding-top: 100px;
+    flex-direction: column;
+    width:100%;
+}
+
+.profileCard p{
+    width: 100%;
+    text-align: center;
+    font-size: calc(2vw + 3vh);
+    font-weight: 800;
+    color: var(--text-color2);
+    margin-bottom: 30px;
+}
+
+.restName.home, .restLoc.home{
+    position: relative;
+}
+
+#noRestaurants{
+    font-size: 14pt;
+    
+}
+
+#addScreen, #editScreen{
+    flex-direction: column;
+    padding-top: 20%;
+}
+
+#addTitle, #editTitle{
+    font-weight: 900;
+    font-size: 16pt;
+    color: var(--text-color1);
+    margin: 30px;
+    margin-top: 60px;
+    
+
+}
+#addForm, #editForm{
+    background-color: var(--secondary-color);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+}
+
+#addForm label, #addForm input, #editForm label, #editForm input{
+    font-size: 14pt;
+    font-weight: 700;
+}
+#addForm input, #editForm input{
+    padding: 5px;
+}
+
+#addForm input, #addForm select, #editForm input, #editForm select{
+    margin-bottom: 20px;
+}
+
+#addForm button, #editForm button{
+    align-self: center;
+    background-color: var(--button-color);
+    border: solid 2px var(--secondary-color);
+    color: var(--secondary-color);
+    width: 95px;
+    height: 105%;
+    border-radius: 5px;
+    font-weight: 700;
+    line-height: 20px;
 }

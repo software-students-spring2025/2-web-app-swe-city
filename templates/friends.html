@@ -12,11 +12,11 @@
     <header>
         <div id="appName"><a href="/home">Home</a></div>
         <div id="profile"><a href="/roulette">Roulette</a></div>
-        <div id="addFriends"><a href="/friends">Friends</a></div>
+        <div id="addFriends"><a href="/friends">Social</a></div>
         <div id="logOut"> <a href="/logout">Log Out</a></div>
     </header>
     <div id="search">
-        <p>Search For a Friend!</p>
+        <p>Search for people you know!</p>
         <form id="searchForm" action="friends" method="GET">
             <input class="box" id="searchBox" name="searchUser">
             <button id="searchButton">Search</button>
@@ -39,14 +39,14 @@
     </div>
 
     <div id="AllFriends">
-        <p>Current Friends</p>
+        <p>Current Following</p>
         {% if friends %} {% for friend in friends %}
 
         <a id="friendLink" href="profile/{{friend.id}}">
             <div class="friend">
                 <div class="friendUser">{{ friend.username }}</div>
                 <form action="{{ url_for('remove_friend', friend_id=friend.id) }}" method="POST">
-                    <button id= "" type="submit">Remove Friend</button>
+                    <button id= "" type="submit">Unfollow</button>
                 </form>
             </div>
         </a>
