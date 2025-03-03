@@ -29,7 +29,14 @@ Restaurant Roulette helps people more easily keep track of their favorite food s
 
 ## Steps necessary to run the software
 
-See instructions. Delete this line and place instructions to download, configure, and run the software here.
+### 1️ Install Python
+- Make sure Python is installed. 
+
+### 2 Install Dependencies
+- run command, `pip install -r requirements.txt`
+
+### 3 Run the App
+- run command, `python3 app.py` or `python app.py`
 
 ## Task boards
 
