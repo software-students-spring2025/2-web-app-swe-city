@@ -29,14 +29,92 @@ Restaurant Roulette helps people more easily keep track of their favorite food s
 
 ## Steps necessary to run the software
 
-### 1️ Install Python
-- Make sure Python is installed. 
+### Python
 
-### 2 Install Dependencies
-- run command, `pip install -r requirements.txt`
+This software application has been written in Python.
+To be able to run the application, a Python interpreter is required in the machine.
 
-### 3 Run the App
-- run command, `python3 app.py` or `python app.py`
+Python can be downloaded [here](https://www.python.org/downloads/).
+
+### pip
+
+pip is a package manager for Python and Python modules. pip is usually included in the Python installation, but if for some reason it is not in the machine, make sure to install it.
+
+This is going to be used to install dependencies for this application.
+
+pip can be installed [here](https://pip.pypa.io/en/stable/installation/)
+
+### Virtual environment (venv) - Optional
+
+A virtual environment is a self-contained isolated space where project dependencies are installed.
+Dependencies are automatically installed globally, meaning that other projects will also be accessing/using those dependencies. Therefore, for this project, a virtual environment is recommended so that the dependencies installed for it will not interact with/be used by other projects in your machine.
+After cloning the GitHub repository, at the root directory of the project, run the following command in the command line:
+
+`python -m venv .venv`
+
+or
+
+`python3 -m venv .venv`
+
+Then, to active the environment, run the following command:
+
+`source .venv/bin/activate` (MacOS)
+
+`.venv\Scripts\activate.bat` (Windows)
+
+The dependencies below should now be installed in this virtual environment.
+
+<br/>
+
+### Dependencies
+
+### Automatic Installation
+
+To automatically install all of the required dependencies, run the following command in the command line:
+
+`pip install -r requirements.txt`
+
+### Manual Installation
+
+If the requirements file is missing or some error occurred, manually install the dependencies of the project.
+
+The following commands should be run in the command line.
+
+#### Flask
+
+`pip install Flask`
+
+#### Flask-Login
+
+`pip install Flask-Login`
+
+#### dotenv
+
+`pip install python-dotenv`
+
+#### pymongo
+
+`python3 -m pip install pymongo`
+
+Finally, verify that all of the dependencies mentioned in the requirements file have been successfully installed:
+
+`pip list`
+
+<br/>
+
+### Running the Application
+
+To run the application, run either of the commands in the command line:
+
+`python app.py` or `python3 app.py`
+
+or
+
+`flask run`
+
+A URL will be given once the command is successfully run.
+
+Click or copy/paste the URL into your browser to access the running software application.
 
 ## Task boards
 
